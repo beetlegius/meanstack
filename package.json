@@ -1,16 +1,17 @@
 {
-  "name": "babel-with-gulp",
+  "name": "meanstack",
   "version": "1.0.0",
-  "description": "Starter code for using Babel with Gulp",
+  "description": "First steps with the MEAN stack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch --gulpfile client/gulpfile.babel.js"
   },
-  "author": "Carlos Souza <carloshrsouza@gmail.com> (http://csouza.me/)",
-  "license": "ISC",
+  "author": "Gustavo Molinari <gustavo.molinari@xaver.com.ar> (http://xaver.com.ar/)",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/codeschool/babel-with-gulp.git"
+    "url": "git+ssh://git@github.com/Beetlegius/meanstack.git"
   },
   "keywords": [
     "babel",
@@ -18,7 +19,7 @@
     "es2015"
   ],
   "bugs": {
-    "url": "https://github.com/codeschool/babel-with-gulp/issues"
+    "url": "https://github.com/Beetlegius/meanstack/issues"
   },
   "homepage": "https://github.com/codeschool/babel-with-gulp#readme",
   "devDependencies": {
@@ -29,6 +30,12 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "babel-core": "^6.1.21"
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "babel-core": "^6.1.21",
+    "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "mongo": "^0.1.0"
   }
 }
