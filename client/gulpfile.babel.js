@@ -1,9 +1,12 @@
+'use strict';
+
 import gulp from "gulp";
 import browserify from "browserify";
 import source from "vinyl-source-stream";
 import coffeeify from "coffeeify";
+import sass from 'gulp-sass';
 
-gulp.task("default", ["transpile"]);
+gulp.task("default", ["transpile", "sassify"]);
 
 gulp.task("transpile", () => {
 
@@ -19,6 +22,14 @@ gulp.task("transpile", () => {
 
 });
 
-gulp.task("watch", ["transpile"], () => {
+gulp.task("watch", ["transpile", "sassify"], () => {
   gulp.watch("src/**/*", ["transpile"]);
+  gulp.watch("styles/**/*", ["sassify"]);
+});
+
+
+gulp.task('sassify', () => {
+  return gulp.src('styles/app.scss')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest('dist/css'));
 });

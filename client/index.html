@@ -4,17 +4,136 @@
     <meta charset="UTF-8">
     <title>MEAN stack</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="dist/css/app.css">
   </head>
 
   <body>
-    <header>
-      <h1>MEAN stack</h1>
-    </header>
+    <!-- Static navbar -->
+    <nav class="navbar navbar-menu">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Mostrar menú</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img class="img-responsive" ng-src="../img/logo-latuf.png" alt="Agroganadera Latuf"></a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a ng-href="/">Home</a></li>
+            <li><a ng-href="/nosotros">Nosotros</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servicios <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a ng-href="/servicios/mercado-interno">Mercado interno</a></li>
+                <li><a ng-href="/servicios/exportacion">Exportación</a></li>
+                <li><a ng-href="/servicios/hoteleria">Hotelería</a></li>
+                <li><a ng-href="/servicios/cultivos">Cultivos</a></li>
+              </ul>
+            </li>
+            <li><a ng-href="/rse-y-medio-ambiente">RSE y Medio ambiente</a></li>
+            <li><a ng-href="/novedades">Novedades</a></li>
+            <li><a ng-href="/contacto">Contacto</a></li>
+            <!--
+            <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+            -->
+          </ul>
+        </div><!--/.nav-collapse -->
+
+    </nav>
 
     <main>
-      <div class="container" ui-view></div>
+      <img class="img-responsive" ng-src="../img/banner.jpg" alt="Agroganadera Latuf">
+      <div class="container-fluid" ui-view>
+        <h3 class="subtitle fancy"><span>Conozca nuestros servicios</span></h3>
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row vertical-divider text-center">
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="servicio">
+              <img class="text-center" ng-src="../img/nacional.png" alt="Generic placeholder image">
+              <p class="description">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+              <p><a class="btn btn-primary" ng-href="/servicios/mercado-interno" role="button">Ver más</a></p>
+            </div>
+          </div><!-- /.col-lg-3 -->
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="servicio">
+              <img class="text-center" ng-src="../img/internacional.png" alt="Generic placeholder image">
+              <p class="description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+              <p><a class="btn btn-warning" ng-href="/servicios/exportacion" role="button">Ver más</a></p>
+            </div>
+          </div><!-- /.col-lg-3 -->
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="servicio">
+              <img class="text-center" ng-src="../img/cultivos.png" alt="Generic placeholder image">
+              <p class="description">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-success" ng-href="/servicios/cultivos" role="button">Ver más</a></p>
+            </div>
+          </div><!-- /.col-lg-3 -->
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="servicio">
+              <img class="text-center" ng-src="../img/hoteleria.png" alt="Generic placeholder image">
+              <p class="description">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              <p><a class="btn btn-warning" href="/servicios/hoteleria" role="button">Ver más</a></p>
+            </div>
+          </div><!-- /.col-lg-3 -->
+
+        </div><!-- /.row -->
+
+      </div>
     </main>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="footer-link" ng-href="/nosotros">Nosotros</a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="footer-link" ng-href="/servicios">Servicios</a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="footer-link" ng-href="/rse-y-medio-ambiente">RSE y Medio Ambiente</a>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="footer-link" ng-href="/novedades">Novedades</a>
+          </div>
+
+        </div>
+
+        <hr />
+<!--
+        <ul class="list-unstyled inline">
+          <li class="text-right">EMAIL: info@agroganaderalatuf.com</li>
+          <li><img class="logo-footer" ng-src="../img/logo-latuf.png" alt="Logo Latuf"></li>
+          <li class="text-left">TELÉFONO: (221) 479-7748 / 7749</li>
+        </ul>
+-->
+        <div class="row">
+          <div class="col-lg-5">
+            <p class="text-right middle">EMAIL: info@agroganaderalatuf.com</pg>
+          </div>
+          <div class="col-lg-2">
+            <p class="text-center middle"><img class="logo-footer" ng-src="../img/logo-latuf-footer.png" alt="Logo Latuf"></p>
+          </div>
+          <div class="col-lg-5">
+            <p class="text-left middle">TELÉFONO: (221) 479-7748 / 7749</p>
+          </div>
+        </ul>
+        <p class="copyright">© Copyright 2016 - Agroganadera Latuf - Todos los derechos reservados</p>
+      </div>
+    </footer>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
