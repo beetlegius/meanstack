@@ -22,14 +22,15 @@ gulp.task("transpile", () => {
 
 });
 
+gulp.task('sassify', () => {
+
+  return gulp.src('styles/**/*.scss')
+  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  .pipe(gulp.dest('dist/css'));
+
+});
+
 gulp.task("watch", ["transpile", "sassify"], () => {
   gulp.watch("src/**/*", ["transpile"]);
   gulp.watch("styles/**/*", ["sassify"]);
-});
-
-
-gulp.task('sassify', () => {
-  return gulp.src('styles/app.scss')
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('dist/css'));
 });
